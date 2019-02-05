@@ -3,9 +3,13 @@ package Zadanie_1;
 public class Truck extends Car {
     private int capacity;
 
-    public Truck(String name, double averageFuelConsumption, int tankCapacity, boolean airCondition, int capacity) {
-        super(name, averageFuelConsumption, tankCapacity, airCondition);
+    public Truck(String name, double averageFuelConsumption, int tankCapacity, int capacity) {
+        super(name, averageFuelConsumption, tankCapacity);
         this.capacity = capacity;
+    }
+
+    public Truck(String name, double averageFuelConsumption, int tankCapacity) {
+        super(name, averageFuelConsumption, tankCapacity);
     }
 
     public int getCapacity() {
@@ -13,14 +17,15 @@ public class Truck extends Car {
     }
 
     public void setCapacity(int capacity) {
+
+
+
         this.capacity = capacity;
     }
 
     @Override
     public String toString() {
-        return "Truck{" +
-                "capacity=" + capacity +
-                '}';
+        return super.toString()+ ", Ładowność - " +capacity;
     }
 }
 
