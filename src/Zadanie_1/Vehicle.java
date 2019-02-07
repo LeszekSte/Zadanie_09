@@ -8,6 +8,7 @@ public class Vehicle {
     public Vehicle(String name, double averageFuelConsumption, int tankCapacity) {
         this.name = name;
         this.averageFuelConsumption = averageFuelConsumption;
+
         this.tankCapacity = tankCapacity;
     }
 
@@ -23,8 +24,9 @@ public class Vehicle {
         return averageFuelConsumption;
     }
 
-    public void setAverageFuelConsumption(double averageFuelConsumption) {
+    public double setAverageFuelConsumption(double averageFuelConsumption) {
         this.averageFuelConsumption = averageFuelConsumption;
+        return averageFuelConsumption;
     }
 
     public int getTankCapacity() {
@@ -35,12 +37,15 @@ public class Vehicle {
         this.tankCapacity = tankCapacity;
     }
 
+     int zasiegPojazdu() {
+        return (int) (getTankCapacity() / getAverageFuelConsumption() * 100);
+    }
+
     @Override
     public String toString() {
         return "Vehicle{" +
                 "name='" + name + '\'' +
-                ", averageFuelConsumption=" + averageFuelConsumption +
-                ", tankCapacity=" + tankCapacity +
-                '}';
+                ", averageFuelConsumption=" + averageFuelConsumption +" l/100km"+
+                ", tankCapacity=" + tankCapacity + " liters" ;
     }
 }
