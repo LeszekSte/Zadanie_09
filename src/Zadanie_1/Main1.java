@@ -15,12 +15,12 @@ public class Main1 {
 
         printInfo( vehicles);
 
-        System.out.printf("Zasięg samochodu %d km\n", ((Car) vehicles[0]).zasiegPojazdu());
+        System.out.printf("Zasięg samochodu %d km\n", (vehicles[0]).zasiegPojazdu());
         ;
 
         additionalCombustion(400, vehicles[1]);
-//        System.out.println("Zasięg ciężarówki " +((Truck) vehicles[1]).zasiegPojazdu() + " km");km
-        System.out.printf("Zasięg ciężarówki %d km\n ", ((Car) vehicles[1]).zasiegPojazdu());
+
+        System.out.printf("Zasięg ciężarówki %d km\n ", ( vehicles[1]).zasiegPojazdu());
     }
 
     static boolean airConditionON() {
